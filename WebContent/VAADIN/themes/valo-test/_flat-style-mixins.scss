@@ -1,15 +1,15 @@
 
-$v-button-background-color: v-valo-selection-color();
+$v-button-background-color: valo-selection-color();
 
 // FLAT STYLE
-@mixin v-valo-textfield-focus-style ($bevel-style: $v-textfield-bevel-style, $bevel-depth: $v-textfield-bevel-depth, 
+@mixin valo-textfield-focus-style ($bevel-style: $v-textfield-bevel-style, $bevel-depth: $v-textfield-bevel-depth, 
                                      $shadow-style: $v-textfield-shadow-style, $shadow-depth: $v-textfield-shadow-depth) {
   background-color: #fff;
-  color: v-valo-selection-color();
+  color: valo-selection-color();
   outline: none;
 }
 
 
-/*@function v-valo-overlay-box-shadow ($bg) {
+/*@function valo-overlay-box-shadow ($bg) {
   @return 0 0 0 4px rgba(#000, .5);
 }*/

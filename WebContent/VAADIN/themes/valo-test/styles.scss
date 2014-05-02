@@ -54,8 +54,8 @@ body {
 
 
 .valo-test {
-  @include v-valo;
-  @include v-valo-component-group;
+  @include valo;
+  @include valo-component-group;
 
   @include valo-styleguide-menu;
 
@@ -73,46 +73,46 @@ body {
   }
   
   .wrapping {
-    @include v-valo-horizontallayout--wrapping;
+    @include valo-horizontallayout--wrapping;
   }
 
   .v-button-primary {
-    @include v-valo-button-style($background-color: v-valo-selection-color());
+    @include valo-button-style($background-color: valo-selection-color());
     padding: 0 round($v-unit-size/1.4);
   }
   
   @include variants;
 
   .v-button-frameless {
-    @include v-valo-button-borderless-style;
+    @include valo-button-borderless-style;
   }
 
   .v-tabsheet-centered-tabs {
-    @include v-valo-tabsheet-centered-tabs;
+    @include valo-tabsheet-centered-tabs;
   }
 
   .v-tabsheet-equal-width-tabs {
-    @include v-valo-tabsheet-equal-width-tabs($flex: false);
+    @include valo-tabsheet-equal-width-tabs($flex: false);
   }
 
   .v-tabsheet-icons-on-top {
-    @include v-valo-tabsheet-icons-on-top;
+    @include valo-tabsheet-icons-on-top;
   }
 
   .v-tabsheet-selected-closable {
-    @include v-valo-tabsheet-only-selected-closable;
+    @include valo-tabsheet-only-selected-closable;
   }
 
   .v-tabsheet-padded-tabbar {
-    @include v-valo-tabsheet-padded-tabbar;
+    @include valo-tabsheet-padded-tabbar;
   }
 
   .v-panel-borderless {
-    @include v-valo-panel-borderless-style;
+    @include valo-panel-borderless-style;
   }
 
   .v-formlayout.light {
-    @include v-valo-formlayout-light-style;
+    @include valo-formlayout-light-style;
 
     .v-caption-large {
       line-height: round($v-unit-size * 1.2);
@@ -120,12 +120,12 @@ body {
   }
 
   .v-textfield-large.v-textfield-large.v-textfield-large {
-    @include v-valo-textfield-size($unit-size: round($v-unit-size * 1.2));
+    @include valo-textfield-size($unit-size: round($v-unit-size * 1.2));
   }
 
   
   //.v-filterselect-button {
-  //  @include v-valo-button-style;
+  //  @include valo-button-style;
   //  width: $v-unit-size;
   //  padding: 0;
   //  border-width: 0 0 0 $v-button-border-width;

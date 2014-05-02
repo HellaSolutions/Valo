@@ -1,4 +1,4 @@
-@mixin v-valo-dragwrapper ($primary-stylename: v-ddwrapper) {
+@mixin valo-dragwrapper ($primary-stylename: v-ddwrapper) {
 
   [draggable=true] {
     -khtml-user-drag: element;
@@ -19,7 +19,7 @@
     content: "";
     position: absolute;
     z-index: 10;
-    border: 0 solid v-valo-focus-color();
+    border: 0 solid valo-focus-color();
     top: -1px;
     right: -1px;
     bottom: -1px;
@@ -110,7 +110,7 @@
   border-radius: $v-border-radius;
   @include opacity(.3);
 
-  $focus-color: v-valo-focus-color();
+  $focus-color: valo-focus-color();
   @if is-dark-color($focus-color) {
     background: scale-color($focus-color, $lightness: 50%);
   } @else {
