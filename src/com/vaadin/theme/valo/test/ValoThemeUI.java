@@ -86,7 +86,7 @@ import com.vaadin.ui.VerticalSplitPanel;
 import com.vaadin.ui.Window;
 
 @SuppressWarnings("serial")
-@Theme("valo")
+@Theme("valo-test")
 @Title("Valo Theme Test")
 public class ValoThemeUI extends UI implements Handler {
 
@@ -307,7 +307,7 @@ public class ValoThemeUI extends UI implements Handler {
             @Override
             public void buttonClick(ClickEvent event) {
                 notification.setPosition(Position.MIDDLE_CENTER);
-                notification.setDelayMsec(0);
+                notification.setDelayMsec(-1);
                 notification.setStyleName("humanized");
                 notification.show(getPage());
             }

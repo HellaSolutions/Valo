@@ -1,5 +1,7 @@
 package com.vaadin.theme.valo.demo;
 
+import java.util.Date;
+
 import com.vaadin.data.Item;
 import com.vaadin.data.Property.ValueChangeEvent;
 import com.vaadin.data.Property.ValueChangeListener;
@@ -28,6 +30,8 @@ public class ContactsView extends HorizontalSplitPanel implements View,
     private static final String PROPERTY_FIRST_NAME = "First Name";
     private static final String PROPERTY_LAST_NAME = "Last Name";
     private static final String PROPERTY_COMPANY = "Company";
+    private static final String PROPERTY_BIRTHDAY = "Birthday";
+    private static final String PROPERTY_VIP = "V.I.P.";
 
     private Table contactList;
 
@@ -55,6 +59,8 @@ public class ContactsView extends HorizontalSplitPanel implements View,
         contactList
                 .addContainerProperty(PROPERTY_LAST_NAME, String.class, null);
         contactList.addContainerProperty(PROPERTY_COMPANY, String.class, null);
+        contactList.addContainerProperty(PROPERTY_BIRTHDAY, Date.class, null);
+        contactList.addContainerProperty(PROPERTY_VIP, Boolean.class, null);
         contactList.setSelectable(true);
 
         generateData();
@@ -73,10 +79,9 @@ public class ContactsView extends HorizontalSplitPanel implements View,
 
     private void generateData() {
         for (int i = 0; i < 100; i++) {
-            contactList.addItem(
-                    new Object[] { Generator.randomFirstName(),
-                            Generator.randomLastName(),
-                            Generator.randomCompanyName() }, i);
+            contactList.addItem(new Object[] { Generator.randomFirstName(),
+                    Generator.randomLastName(), Generator.randomCompanyName(),
+                    new Date(), true }, i);
         }
     }
 

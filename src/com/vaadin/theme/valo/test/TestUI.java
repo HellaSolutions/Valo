@@ -28,8 +28,10 @@ import com.vaadin.ui.Embedded;
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
+import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
+import com.vaadin.ui.VerticalSplitPanel;
 
 @Theme("valo")
 public class TestUI extends UI {
@@ -53,30 +55,30 @@ public class TestUI extends UI {
             sample.addComponent(component);
         }
 
-        setContent(sample);
+        // setContent(sample);
 
-        // HorizontalSplitPanel sp = new HorizontalSplitPanel();
-        // setContent(sp);
-        //
-        // final HorizontalLayout layout = new HorizontalLayout();
-        // layout.setSizeFull();
-        // layout.setMargin(true);
-        // sp.addComponent(layout);
-        //
-        // // layout.setDefaultComponentAlignment(Alignment.BOTTOM_LEFT);
-        //
-        // Label label = new Label(
-        // "Me non paenitet nullum festiviorem excogitasse ad hoc.");
-        // label.setWidth("200px");
-        // layout.addComponent(label);
-        //
-        // Button button = new Button("Button");
-        // layout.addComponent(button);
-        // layout.setComponentAlignment(button, Alignment.MIDDLE_CENTER);
-        //
-        // TextField tf = new TextField("TextField");
-        // layout.addComponent(tf);
-        // layout.setComponentAlignment(tf, Alignment.BOTTOM_RIGHT);
+        VerticalSplitPanel sp = new VerticalSplitPanel();
+        setContent(sp);
+
+        final HorizontalLayout layout = new HorizontalLayout();
+        layout.setSizeFull();
+        layout.setMargin(true);
+        sp.setSecondComponent(layout);
+
+        // layout.setDefaultComponentAlignment(Alignment.BOTTOM_LEFT);
+
+        Label label = new Label(
+                "Me non paenitet nullum festiviorem excogitasse ad hoc.");
+        label.setWidth("200px");
+        layout.addComponent(label);
+
+        Button button = new Button("Button");
+        layout.addComponent(button);
+        layout.setComponentAlignment(button, Alignment.MIDDLE_CENTER);
+
+        TextField tf = new TextField("TextField");
+        layout.addComponent(tf);
+        layout.setComponentAlignment(tf, Alignment.BOTTOM_RIGHT);
 
     }
 
